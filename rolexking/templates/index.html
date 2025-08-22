@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rolex Satta King</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: #121212;
+        color: #fff;
+        padding: 10px;
+      }
+      
+      .banner {
+        width: 100%;
+        height: 125px;
+        margin-bottom: 15px;
+        background: linear-gradient(90deg, #111, #222);
+        color: #fff;
+        font-family: 'Arial', sans-serif;
+        overflow: hidden;
+        position: relative;
+        border: 2px solid gold;
+        box-shadow: 0 0 10px gold;
+      }
+      
+      .headline {
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        padding-top: 8px;
+        color: gold;
+        text-shadow: 0 0 5px #ffd700;
+        animation: glow 1.5s infinite alternate;
+      }
+      
+      @keyframes glow {
+        0% {
+          text-shadow: 0 0 5px #ffd700;
+        }
+        100% {
+          text-shadow: 0 0 20px #ff0;
+        }
+      }
+      
+      .numbers {
+        display: flex;
+        justify-content: space-around;
+        font-size: 28px;
+        margin-top: 14px;
+      }
+      
+      .numbers span {
+        animation: flicker 1s infinite;
+      }
+      
+      @keyframes flicker {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.4;
+          transform: scale(1.2);
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      
+      .play-button {
+        position: absolute;
+        bottom: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: red;
+        color: white;
+        padding: 6px 8px;
+        font-size: 15px;
+        border-radius: 20px;
+        animation: pulse 1.2s infinite;
+      }
+      
+      @keyframes pulse {
+        0% {
+          transform: translateX(-50%) scale(1);
+        }
+        50% {
+          transform: translateX(-50%) scale(1.1);
+        }
+        100% {
+          transform: translateX(-50%) scale(1);
+        }
+      }
+      
+      .section {
+        background: #1e1e1e;
+        border-radius: 12px;
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+      
+      .section h2 {
+        font-size: 1.4rem;
+        font-family: 'Arial', sans-serif;
+        margin-bottom: 10px;
+        text-align: center;
+        border-bottom: 2px solid #333;
+        padding-bottom: 5px;
+      }
+      
+      /* Current Number */
+      .main-number {
+        font-size: 7.5rem;
+        font-weight: bold;
+        text-align: center;
+        font-family: 'Arial Black', Gadget, sans-serif;
+        margin: 20px 0;
+        color: #ffeb3b;
+        animation: pop 1.2s ease-in-out infinite alternate;
+      }
+      .main-number2 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+        margin: 10px 0;
+        color: #ffeb3bff;
+        animation: pop 1.2s ease-in-out infinite alternate;
+      }
+      
+      /* Animation effect */
+      @keyframes pop {
+        0% {
+          transform: scale(0.9);
+          opacity: 0.7;
+        }
+        100% {
+          transform: scale(1.2);
+          opacity: 1;
+        }
+      }
+      
+      /* Previous & Upcoming Numbers */
+      .columns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+        gap: 10px;
+      }
+      
+      .box {
+        background: #2a2a2a;
+        padding: 8px; /* ✅ fixed padding (removed commas) */
+        text-align: center;
+        font-family: 'Arial Black', Gadget, sans-serif;
+        border-radius: 8px;
+        font-size: 2.8rem; /* parent text size */
+        font-weight: bold;
+        color: #00e5ff;
+      }
+      
+      .innerb {
+        font-size: 1.0rem; /* smaller font size */
+        font-weight: normal; /* optional: make it less bold */
+        font-family: 'Arial', Gadget, sans-serif;
+        color: #d5dcddff;
+        margin: 3px; /* keep same color */
+      }
+      
+      .box2 {
+        background: #2a2a2a;
+        padding: 8px; /* ✅ fixed padding (removed commas) */
+        text-align: center;
+        border-radius: 8px;
+        font-size: 2rem; /* parent text size */
+        font-weight: bold;
+        color: #00e5ff;
+      }
+      
+      .box3 {
+        background: #2a2a2a;
+        padding: 8px; /* ✅ fixed padding (removed commas) */
+        text-align: center;
+        border-radius: 8px;
+        font-size: 1rem; /* parent text size */
+        font-weight: bold;
+        color: #00e5ff;
+      }
+      
+      .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 10px;
+      }
+      
+      .pagination a {
+        text-decoration: none;
+        background: #333;
+        color: #fff;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 0.9rem;
+      }
+      
+      .pagination a.active {
+        background: #ff6b6b;
+      }
+      .pagination a {
+        color: #ffeb3b;
+        text-align: center;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        margin-right: 10px;
+        text-decoration: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        background-color: #2c2c2c;
+      }
+      
+      .pagination a.active {
+        background-color: #ffeb3b;
+        color: #000;
+      }
+      
+      /* Footer Styles */
+      .site-footer {
+        background-color: #121212;
+        border: 2px solid gold;
+        box-shadow: 0 0 10px gold;
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+        color: #d5c9c9ff;
+      }
+      
+      .site-footer a {
+        color: #ffeb3b;
+        text-decoration: none;
+        margin: 0 6px;
+      }
+      
+      .site-footer a:hover {
+        text-decoration: underline;
+      }
+      
+      /* Larger screen adjustments */
+      @media (min-width: 768px) {
+        .main-number {
+          font-size: 5rem;
+        }
+        .box {
+          font-size: 2.2rem;
+        }
+        .section h2 {
+          font-size: 1.4rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="headline">👑 Satta King 👑</div>
+      <div class="numbers">
+        <span>R</span>
+        <span>O</span>
+        <span>L</span>
+        <span>E</span>
+        <span>X</span>
+      </div>
+      <div class="play-button">Join Us</div>
+    </div>
+
+    <!-- Current Number -->
+    <div class="section">
+      <h2>Aaj Ka Number Khula Hai 🫵</h2>
+      {% for s in secret %}
+        {% if forloop.last %}
+          <div class="main-number">{{ s.Today_Number }}</div>
+          <div class="main-number2">{{ s.Created_at|date:'l, d F' }}</div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- Notification Banner -->
+    <div class="section">
+      <h2>📢 Announcement ✨</h2>
+      <div class="pagination">
+        <a href="/">
+          {% for s in secret %}
+            {% if forloop.last %}
+              {{ s.Description }}  
+            {% endif %}
+          {% endfor %}
+        </a>
+      </div>
+    </div>
+
+    <!-- Previous Numbers -->
+    <div class="section">
+      <h2>Opened Number's 👉</h2>
+      <div class="columns">
+        {% with reversed_list=secret|dictsortreversed:"Created_at" %}
+  {% for s in reversed_list|slice:"1:7" %}
+    <div class="box">
+      {{ s.Today_Number }}
+      <p class="innerb">
+        {{ s.Created_at|date:'D, d M' }}<br>
+        ⏰{{ s.Created_at|date:'h:i A' }}
+      </p>
+    </div>
+  {% endfor %}
+{% endwith %}
+
+      </div>
+    </div>
+
+    <!-- Upcoming Numbers -->
+    <div class="section">
+      <h2>Upcoming Day's 📅</h2>
+      <div class="columns">
+        <div class="box2" style="color:#4caf50;">Monday</div>
+        <div class="box2" style="color:#4caf50;">Tuesday</div>
+        <div class="box2" style="color:#4caf50;">Saturday</div>
+        <div class="box2" style="color:#4caf50;">Sunday</div>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="section">
+      <h2>Site Supervisor 👨</h2>
+      <div class="pagination">
+        <a href="/">APNI GAME KA RESULT YA AD LAGVANE KE LIYE SAMPARK KAREIN HUMARA KOI AGENT NHI HAI AAP HUMARE DIYE HUE NUMBER PAR RESULT OR AD LAGNAVE KE LIYE DIRECT SAMPARK KAREIN AGENTO SE BACHE!</a>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>&copy; 2025 Rolex Satta King. All rights reserved.</p>
+        <p>
+          <a href="/about">Disclaimer</a> |
+          <a href="/">Contact Us</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
